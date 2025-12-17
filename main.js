@@ -15,7 +15,7 @@ const path_to_Dbtranscriptions = "db/TRANSCRIPTIONS.json";
 const menu_for_display = {
   Search_People_by_Name: "Search People by Name",
   Search_People_by_Age: "Search People by Age",
-  Find_Dangerous_People_Goal: " Find Dangerous People Goal",
+  Find_Dangerous_People_Goal: "Find Dangerous People Goal",
   Exit: "Exit",
 };
 
