@@ -1,8 +1,10 @@
-import { getPeopleList } from "./utils/PeopleFunctions.js";
-import { GetCallRecordsTranscriptions } from "./utils/transcriptionsFunctions.js";
 import input from "analiza-sync";
+import { getPeopleList, SearchPeopleByName } from "./utils/PeopleFunctions.js";
+import { GetCallRecordsTranscriptions } from "./utils/transcriptionsFunctions.js";
+
 const url1 = "https://spies-test-server.vercel.app/people";
 const url2 = "https://spies-test-server.vercel.app/transcriptions";
+
 const path_to_DbPeople = "db/PEOPLE.json";
 const path_to_Dbtranscriptions = "db/TRANSCRIPTIONS.json";
 
@@ -30,6 +32,7 @@ function menu() {
     userinput = input("Enter your choice:\n");
     if (userinput == "1") {
       console.log("You choose to Search People by Name");
+      userinput = input("Enter the name you loking for:\n");
     }
     if (userinput == "2") {
       console.log("You choose to ");
