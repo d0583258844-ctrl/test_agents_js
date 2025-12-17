@@ -29,7 +29,7 @@ export async function SearchPeoplebyAge(Age, path) {
   const data1 = JSON.parse(data);
   for (let i = 0; i < data1.length; i++) {
     const element = data1[i];
-    if (element["age"] === Age) {
+    if (element["age"] == Age) {
       console.log(element);
       return;
     }

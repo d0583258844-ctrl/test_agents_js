@@ -1,5 +1,9 @@
 import input from "analiza-sync";
-import { getPeopleList, SearchPeopleByName } from "./utils/PeopleFunctions.js";
+import {
+  getPeopleList,
+  SearchPeopleByName,
+  SearchPeoplebyAge,
+} from "./utils/PeopleFunctions.js";
 import { GetCallRecordsTranscriptions } from "./utils/transcriptionsFunctions.js";
 
 const url1 = "https://spies-test-server.vercel.app/people";
@@ -37,6 +41,8 @@ async function menu() {
     }
     if (userinput == "2") {
       console.log("You choose to Search People by Age");
+      userinput = input("Enter the user age you loking for:\n");
+      await SearchPeoplebyAge(userinput, path_to_DbPeople);
     }
     if (userinput == "3") {
       console.log("");
