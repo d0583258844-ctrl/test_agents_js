@@ -17,7 +17,7 @@ const menu_for_display = {
 
 GetCallRecordsTranscriptions(url2, path_to_Dbtranscriptions);
 getPeopleList(url1, path_to_DbPeople);
-function menu() {
+async function menu() {
   const Menu = menu_for_display;
   let userinput;
   console.log("Hello");
@@ -33,9 +33,10 @@ function menu() {
     if (userinput == "1") {
       console.log("You choose to Search People by Name");
       userinput = input("Enter the name you loking for:\n");
+      await SearchPeopleByName(userinput, path_to_DbPeople);
     }
     if (userinput == "2") {
-      console.log("You choose to ");
+      console.log("You choose to Search People by Age");
     }
     if (userinput == "3") {
       console.log("");

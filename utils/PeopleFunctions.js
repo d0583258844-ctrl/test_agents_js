@@ -11,13 +11,14 @@ export async function getPeopleList(url, path) {
   }
 }
 
-export async function SearchPeopleByName(Name) {
-  const data = await fs.readFile("../db/PEOPLE.json", "utf-8");
+export async function SearchPeopleByName(Name, path) {
+  const data = await fs.readFile(path, "utf-8");
   const data1 = JSON.parse(data);
   for (let i = 0; i < data1.length; i++) {
     const element = data1[i];
     if (element["name"] === Name) {
       console.log(element);
+      return;
     }
   }
   console.log("User name not found!");
